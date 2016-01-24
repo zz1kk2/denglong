@@ -1,0 +1,77 @@
+#btn1{
+	
+	width:104px;
+	
+	border-radius: 1px;
+	} 
+
+		
+#btn2{
+	
+	width:104px;
+	
+	border-radius: 1px;
+	}
+.butto_top{
+	width:auto;
+	height:auto;
+    
+	float:right;
+	margin-right:54px;
+   
+	}
+#TM{
+	background:pink;
+	margin-top: 24px;
+	margin-left: 50px;
+	clear: both;
+	}	
+.topMenu{
+	position: relative;
+	}	
+	
+.topMenu span:hover{ background:#e6b30b;}	
+	
+	
+.topMenu .def{
+	float: left;
+	background: #0f64b2;
+	padding: 0px 12px;
+	cursor: pointer;
+	height: 35px;
+	line-height: 35px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFF;
+	border: 1px solid #FFF;
+	border-bottom: none;
+	border-right: none;							
+	}
+.topMenu .curr{
+	height: 45px;
+	line-height: 45px;
+	font-size: 18px;
+	margin-top: -10px;
+	background: #00abf2;
+	float: left;
+	cursor: pointer;
+	padding: 0px 12px;
+	font-weight: bold;
+	color: #FFF;
+	display: block;
+	border: 1px solid #FFF;
+	border-bottom: none;
+	border-right: none;
+	
+	}	
+	
+.crdlogo{
+    margin-left:642px;
+    width:100px;
+    height:30px;
+	color: #2d5593;
+	}	
+	
+	
+	
+	
