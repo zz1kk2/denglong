@@ -1,0 +1,114 @@
+﻿
+<div class="articTypeFrame">
+  <table id="dg" title="My Users" >
+		<thead>
+            <tr>				
+                <th field="id" width="50%" align="center">序号</th>
+                <th field="name" width="750%" align="center">名称</th>
+                <th field="aticCount" width="100%" align="center">文章数</th>
+                <th field="status" width="100%" align="center">类等级</th>
+			    <th field="do" width="300%" align="center">操作</th>
+            </tr>
+        </thead>
+
+	<div id="toolbar">
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="add()">添加</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="update()">修改</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deletea()">删除</a>
+    </div>
+  </table>  
+  <div id="add" style="padding-left:60px;padding-top:50px;">  
+		<label><h1>文章类型:&nbsp&nbsp</h1><input id="vv" class="easyui-validatebox" data-options="required:true,validType:'email'" /></label>   
+  </div>  
+
+  <div id="de" style="padding-left:60px;padding-top:50px;"></div> 
+
+
+</div>
+
+
+<style>
+#toolbar{
+ 
+}
+h1{
+display:inline;
+font-size:15px;
+}
+
+label input{
+height:20px;
+font-size:18px;
+margin-left:5px;
+}
+
+
+</style>
+
+
+ <script>
+       $(function(){
+			    $('#dg').datagrid({ 
+				data: [
+					{id:'1', name:'java',aticCount:'1',status:'1'},
+					{id:'2', name:'c#',aticCount:'1',status:'1'}					
+				 ]				
+				});  
+
+                $('#add').dialog({    
+					title: '添加',    
+					width: 400,    
+					height: 200,    
+					cache: false,    
+					shadow:false,
+					modal: false,
+                    buttons:[{
+						text:'保存',
+						iconCls: 'icon-ok',
+						plain:true,
+						handler:function(){}
+					},{
+						text:'关闭',
+						plain:true,
+						iconCls:'icon-no',
+						handler:function(){
+						 $('#add').window('close');
+						}
+					}]
+				});    
+                $('#add').window('close');
+				$('#add').panel('move',{      
+				  top:150    
+				});   
+
+
+			   add=function(){
+			    $('#add').window('open'); 
+			   };
+			 
+			   update=function(){
+
+				  opts=$('#dg').datagrid('getSelected'); 
+				  alert(opts.name);
+			   };
+	  
+			  deletea=function(){
+					$('#de').dialog({    
+						title: '删除',    
+						width: 370,    
+						height: 400,    
+						closed: false,    
+						cache: false
+					});  
+
+                   opts=$('#dg').datagrid('getSelections');                    
+                   content=''
+                   for(var key in opts){  
+				      content += opts[key].id+'.'+opts[key].name+'<br/>';
+				   }                  
+                   $('#de').html('<p style="margin-left:150px;margin-top:50px;">'+content+'</p>'); 
+			  };
+
+		})
+</script>
+

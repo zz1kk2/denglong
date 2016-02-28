@@ -47,6 +47,11 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
         return session.createQuery(hql).list();
     }
 
+    
+    public List<T> find(String hql, String[] strings) {
+        
+        return session.createQuery(hql).list();
+    }
 
     @Transactional
     public T get(Class<T> entity,int id) {
@@ -57,11 +62,39 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
         T t = null;
         return t;
     }
-
-    public List<T> find(String hql, String[] strings) {
-       
-          return session.createQuery(hql).list();
+   
+    
+    /**
+      *     
+      *
+      * @Title: get
+      * @Description: TODO
+      * @param @param entity
+      * @param @return    设定文件
+      * @return List<T>    返回类型
+      * @throws
+     */
+    public List<T> get(Class<T> entity) {
+        // TODO Auto-generated method stub        
+//        Session session = sessionFactory.getCurrentSession();
+//        
+//         = (T) session.get(entity,id);
+        T t = null;
+        return null;
     }
+
+	public List<T> getEn() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<T> getEnById(Class<T> entity, int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+
+  
 
     
     

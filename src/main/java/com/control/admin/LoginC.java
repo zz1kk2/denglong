@@ -24,4 +24,6 @@ public class LoginC {
         return "/admin/frame/index";
     }
     
+  
+    
 }
